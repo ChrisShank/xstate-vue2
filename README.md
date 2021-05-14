@@ -1,7 +1,6 @@
-# @xstate/vue
+# xstate-vue2
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+> Vue 2 composables for xstate and @xstate/fsm
 
 - [Quick Start](#quick-start)
 - [API](#api)
@@ -15,33 +14,25 @@
 - [Persisted and Rehydrated State](#persisted-and-rehydrated-state)
 - [Migration from 0.4.0](#migration-from-040)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 ## Quick Start
 
-1. Install `xstate` and `@xstate/vue`:
+1. Install `xstate` (or `@xstate/fsm`), `@xstate/vue`, and `@vue/composition-api`:
 
 ```bash
-npm i xstate @xstate/vue
+npm i xstate @xstate/vue @vue/composition-api
 ```
 
-**Via CDN**
+2. Install the Composition API plugin
 
-```html
-<script src="https://unpkg.com/@xstate/vue/dist/xstate-vue.min.js"></script>
+```ts
+// main.js
+import Vue from 'vue';
+import VueCompositionAPI from '@vue/composition-api';
+
+Vue.use(VueCompositionAPI);
 ```
 
-By using the global variable `XStateVue`
-
-or
-
-```html
-<script src="https://unpkg.com/@xstate/vue/dist/xstate-vue.fsm.min.js"></script>
-```
-
-By using the global variable `XStateVueFSM`
-
-2. Import the `useMachine` composition function:
+3. Import the `useMachine` composition function:
 
 ```vue
 <template>
@@ -82,8 +73,6 @@ export default {
 };
 </script>
 ```
-
-**Vue 2.x notice:** If you're using Vue 2.x, please see [the recipe](https://xstate.js.org/docs/recipes/vue.html) instead.
 
 ## API
 
@@ -341,15 +330,3 @@ export default {
 };
 </script>
 ```
-
-## Migration from 0.4.0
-
-- For spawned actors created using `invoke` or `spawn(...)`, use the `useActor()` hook instead of `useService()`:
-
-  ```diff
-  -import { useService } from '@xstate/vue';
-  +import { useActor } from '@xstate/vue';
-
-  -const {state, send} = useService(someActor);
-  +const {state, send} = useActor(someActor);
-  ```

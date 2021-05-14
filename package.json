@@ -13,7 +13,7 @@
     "composable"
   ],
   "author": "Christopher Shank <chris.shank.23@gmail.com>",
-  "homepage": "https://github.com/chrishank/xstate-vue2#readme",
+  "homepage": "https://github.com/ChrisShank/xstate-vue2#readme",
   "license": "MIT",
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/chrisshank/xstate-vue2.git"
+    "url": "git+ssh://git@github.com/ChrisShank/xstate-vue2.git"
   },
   "scripts": {
     "dev": "vite",
@@ -37,7 +37,7 @@
     "test": "jest"
   },
   "bugs": {
-    "url": "https://github.com/chrisshank/xstate-vue2/issues"
+    "url": "https://github.com/ChrisShank/xstate-vue2/issues"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
