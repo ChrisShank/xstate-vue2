@@ -1,0 +1,67 @@
+{
+  "name": "xstate-vue2",
+  "version": "0.0.0",
+  "description": "XState tools for Vue",
+  "keywords": [
+    "state",
+    "machine",
+    "statechart",
+    "scxml",
+    "state",
+    "graph",
+    "vue",
+    "composable"
+  ],
+  "author": "Christopher Shank <chris.shank.23@gmail.com>",
+  "homepage": "https://github.com/chrishank/xstate-vue2#readme",
+  "license": "MIT",
+  "main": "./dist/my-lib.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.umd.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chrisshank/xstate-vue2.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisshank/xstate-vue2/issues"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "@xstate/fsm": "^1.0.0",
+    "vue": "^2.6.0",
+    "xstate": "^4.7.8"
+  },
+  "peerDependenciesMeta": {
+    "@xstate/fsm": {
+      "optional": true
+    },
+    "xstate": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "@xstate/fsm": "^1.0.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.4.0",
+    "typescript": "^4.1.2",
+    "vite": "^2.3.0",
+    "vite-plugin-vue2": "^1.5.1",
+    "vue": "^2.6.0",
+    "xstate": "^4.7.8"
+  }
+}
