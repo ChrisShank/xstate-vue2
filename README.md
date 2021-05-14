@@ -16,10 +16,10 @@
 
 ## Quick Start
 
-1. Install `xstate` (or `@xstate/fsm`), `@xstate/vue`, and `@vue/composition-api`:
+1. Install `xstate` (or `@xstate/fsm`), `xstate-vue2`, and `@vue/composition-api`:
 
 ```bash
-npm i xstate @xstate/vue @vue/composition-api
+npm i xstate xstate-vue2 @vue/composition-api
 ```
 
 2. Install the Composition API plugin
@@ -46,7 +46,7 @@ Vue.use(VueCompositionAPI);
 </template>
 
 <script>
-import { useMachine } from '@xstate/vue';
+import { useMachine } from 'xstate-vue2';
 import { createMachine } from 'xstate';
 
 const toggleMachine = createMachine({
@@ -117,7 +117,7 @@ _Since 0.5.0_
   - Defaults to attempting to get the `actor.state`, or returning `undefined` if that does not exist.
 
 ```js
-import { useActor } from '@xstate/vue';
+import { useActor } from 'xstate-vue2';
 
 export default {
   props: ['someSpawnedActor'],
@@ -143,7 +143,7 @@ _Since 0.5.0_
   - or a listener (e.g., `(state) => {/* ... */}`)
 
 ```js
-import { useInterpret } from '@xstate/vue';
+import { useInterpret } from 'xstate-vue2';
 import { someMachine } from '../path/to/someMachine';
 export default {
   setup() {
@@ -156,7 +156,7 @@ export default {
 With options + listener:
 
 ```js
-import { useInterpret } from '@xstate/vue';
+import { useInterpret } from 'xstate-vue2';
 import { someMachine } from '../path/to/someMachine';
 export default {
   setup() {
@@ -181,7 +181,7 @@ export default {
 
 A [Vue composition function](https://v3.vuejs.org/guide/composition-api-introduction.html) that interprets the given finite state `machine` from [`@xstate/fsm`] and starts a service that runs for the lifetime of the component.
 
-This special `useMachine` hook is imported from `@xstate/vue/lib/fsm`
+This special `useMachine` hook is imported from `xstate-vue2/lib/fsm`
 
 **Arguments**
 
@@ -225,7 +225,7 @@ Example: the `'fetchData'` service and `'notifySuccess'` action are both configu
 
 <script>
 import { assign, Machine } from 'xstate';
-import { useMachine } from '@xstate/vue';
+import { useMachine } from 'xstate-vue2';
 
 const fetchMachine = createMachine({
   id: 'fetch',
