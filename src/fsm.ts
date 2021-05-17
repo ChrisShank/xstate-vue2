@@ -17,7 +17,7 @@ const getServiceValue = <
 	return currentValue!;
 };
 
-export function useMachine<TContext extends object, TEvent extends EventObject = EventObject>(
+export function useFSMMachine<TContext extends object, TEvent extends EventObject = EventObject>(
 	stateMachine: StateMachine.Machine<TContext, TEvent, any>,
 	options?: {
 		actions?: StateMachine.ActionMap<TContext, TEvent>;
@@ -42,7 +42,7 @@ export function useMachine<TContext extends object, TEvent extends EventObject =
 	return { state, send: service.send, service };
 }
 
-export function useService<
+export function useFSMService<
 	TContext extends object,
 	TEvent extends EventObject = EventObject,
 	TState extends Typestate<TContext> = { value: any; context: TContext }
