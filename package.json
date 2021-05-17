@@ -1,6 +1,6 @@
 {
   "name": "xstate-vue2",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "XState tools for Vue",
   "keywords": [
     "state",
