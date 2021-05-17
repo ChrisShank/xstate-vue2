@@ -8,7 +8,7 @@
   - [`useService(service)`](#useserviceservice)
   - [`useActor(actor, getSnapshot)`](#useactoractor-getsnapshot)
   - [`useInterpret(machine, options?, observer?)`](#useinterpretmachine-options-observer)
-  - [`useFSMMachine(machine)` with `@xstate/fsm`](#usemachinemachine-with-xstatefsm)
+  - [`useMachine(machine)` with `@xstate/fsm`](#usemachinemachine-with-xstatefsm)
 - [Configuring Machines](#configuring-machines)
 - [Matching States](#matching-states)
 - [Persisted and Rehydrated State](#persisted-and-rehydrated-state)
@@ -176,7 +176,7 @@ export default {
 };
 ```
 
-### `useFSMMachine(machine)` with `@xstate/fsm`
+### `useMachine(machine)` with `@xstate/fsm`
 
 A [Vue composition function](https://v3.vuejs.org/guide/composition-api-introduction.html) that interprets the given finite state `machine` from [`@xstate/fsm`] and starts a service that runs for the lifetime of the component.
 

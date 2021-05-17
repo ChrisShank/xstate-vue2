@@ -30,7 +30,8 @@ node_modules
 # Other
 .DS_Store
 dist/
-types/
+lib/
+es/
 editor/
 _examples/
 __examples/

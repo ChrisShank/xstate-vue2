@@ -1,20 +1,22 @@
 {
+  "include": ["src/**/*", "test/vue-shim.d.ts"],
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
-    "strict": true,
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "types": ["jest", "node"],
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "target": "es5",
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "declaration": true,
-    "outDir": "types",
-    "emitDeclarationOnly": true
-  },
-  "include": ["src", "test/vue-shim.d.ts"]
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "lib": ["es6", "dom"],
+    "strictPropertyInitialization": true,
+    "outDir": "./lib",
+    "rootDir": "./src"
+  }
 }
