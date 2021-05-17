@@ -12,7 +12,6 @@
 - [Configuring Machines](#configuring-machines)
 - [Matching States](#matching-states)
 - [Persisted and Rehydrated State](#persisted-and-rehydrated-state)
-- [Migration from 0.4.0](#migration-from-040)
 
 ## Quick Start
 

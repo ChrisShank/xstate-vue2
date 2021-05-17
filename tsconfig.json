@@ -8,11 +8,13 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["vite/client"],
-    "noEmit": true,
+    "types": ["vite/client", "jest", "node"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "declaration": true,
+    "outDir": "types",
+    "emitDeclarationOnly": true
   },
-  "include": ["./src", "./test", "./main.ts"]
+  "include": ["src/*.ts"]
 }
