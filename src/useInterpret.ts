@@ -8,6 +8,7 @@ import {
 	MachineOptions,
 	Typestate,
 	Observer,
+  Subscription,
 } from 'xstate';
 import { UseMachineOptions, MaybeLazy } from './types';
 import { onBeforeUnmount, onMounted } from '@vue/composition-api';
@@ -76,7 +77,7 @@ export function useInterpret<
 		rehydratedState ? (State.create(rehydratedState) as any) : undefined
 	);
 
-	let sub;
+	let sub: Subscription;
 	onMounted(() => {
 		if (observerOrListener) {
 			sub = service.subscribe(toObserver(observerOrListener));

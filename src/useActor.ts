@@ -44,7 +44,7 @@ export function useActor(
 	const actorRefRef = isRef(actorRef) ? actorRef : shallowRef(actorRef);
 	const state = shallowRef(getSnapshot(actorRefRef.value));
 
-	const send: Sender<EventObject> = (event: EventObject) => {
+	const send: Sender<EventObject> = (event) => {
 		actorRefRef.value.send(event);
 	};
 

@@ -52,7 +52,7 @@ describe('useService composable function', () => {
     const counterService1 = interpret(counterMachine, { id: 'c1' }).start();
     const counterService2 = interpret(counterMachine, { id: 'c2' }).start();
 
-    const { getByTestId, rerender } = render(UseService as any, {
+    const { getByTestId, updateProps } = render(UseService as any, {
       props: { service: counterService1 }
     });
 
@@ -63,7 +63,7 @@ describe('useService composable function', () => {
     await fireEvent.click(incButton);
     expect(countEl.textContent).toBe('1');
 
-    await rerender({ service: counterService2 });
+    await updateProps({ service: counterService2 });
 
     await waitFor(() => expect(getByTestId('count').textContent).toBe('0'));
   });

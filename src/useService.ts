@@ -1,4 +1,4 @@
-import { EventObject, State, Interpreter, Typestate, PayloadSender } from 'xstate';
+import { EventObject, State, Interpreter, Typestate, Sender } from 'xstate';
 
 import { Ref, isRef } from '@vue/composition-api';
 
@@ -23,7 +23,7 @@ export function useService<
 		| Ref<Interpreter<TContext, any, TEvent, TTypestate>>
 ): {
 	state: Ref<State<TContext, TEvent, any, TTypestate>>;
-	send: PayloadSender<TEvent>;
+	send: Sender<TEvent>;
 } {
 	if (
 		process.env.NODE_ENV !== 'production' &&

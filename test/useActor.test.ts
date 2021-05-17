@@ -13,8 +13,8 @@ describe('useActor composable function', () => {
     const machineStateEl = getByTestId('machine-state');
     const actorStateEl = getByTestId('actor-state');
 
-    expect(machineStateEl.textContent).toBe('active');
-    expect(actorStateEl.textContent).toBe('active');
+    expect(machineStateEl.textContent).toContain('active');
+    expect(actorStateEl.textContent).toContain('active');
   });
 
   it('invoked actor in a standalone component should be able to receive events', async () => {
@@ -50,7 +50,7 @@ describe('useActor composable function', () => {
     });
 
     const actorStateEl = getByTestId('actor-state');
-    expect(actorStateEl.textContent).toBe('active');
+    expect(actorStateEl.textContent).toContain('active');
 
     await waitFor(() => expect(serviceMachine.state.value).toBe('success'));
   });
@@ -70,6 +70,6 @@ describe('useActor composable function', () => {
 
     expect(stateEl.textContent).toEqual('42');
     await fireEvent.click(button);
-    expect(stateEl.textContent).toEqual('100');
+    await waitFor(() => expect(stateEl.textContent).toEqual('100'));
   });
 });

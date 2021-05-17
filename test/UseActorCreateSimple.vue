@@ -29,7 +29,6 @@ export default defineComponent({
 	setup() {
 		const actor = shallowRef(createSimpleActor(42));
 		const { state } = useActor(actor, (a) => a.latestValue);
-
 		return { actor, state, createSimpleActor };
 	},
 });

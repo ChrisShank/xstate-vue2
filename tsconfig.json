@@ -8,7 +8,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["vite/client", "jest", "node"],
+    "types": ["jest", "node"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -16,5 +16,5 @@
     "outDir": "types",
     "emitDeclarationOnly": true
   },
-  "include": ["src/*.ts"]
+  "include": ["src", "test/vue-shim.d.ts"]
 }
