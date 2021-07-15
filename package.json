@@ -56,7 +56,7 @@
     "@testing-library/vue": "^5.0.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.3.0",
-    "@vue/composition-api": "^1.0.0-rc.1",
+    "@vue/composition-api": "^1.0.0",
     "@xstate/fsm": "^1.0.0",
     "babel-core": "^6.26.3",
     "husky": "^3.0.0",
