@@ -10,7 +10,6 @@ import { useActor, useSpawn } from '../src';
 import { fromReducer } from 'xstate/lib/behaviors';
 
 const reducer = (state: number, event: { type: 'INC' }): number => {
-  console.log(state, event);
   if (event.type === 'INC') {
     return state + 1;
   }
