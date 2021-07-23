@@ -29,7 +29,7 @@ export function useMachine<
 } {
 	const service = useInterpret(getMachine, options, listener);
 
-	const { initialState } = service.machine;
+	const { initialState } = service;
 	const state = shallowRef(
 		(options.state ? State.create(options.state) : initialState) as State<
 			TContext,
