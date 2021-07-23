@@ -1,5 +1,9 @@
 # @xstate/vue
 
+## 0.2.1
+
+- Fix `useMachine` by accessing `service.initialState` so spawned actors work
+
 ## 0.2.0
 
 - Add `useSelector` composable
