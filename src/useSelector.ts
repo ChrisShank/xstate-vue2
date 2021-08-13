@@ -1,8 +1,8 @@
-import { onMounted, onBeforeUnmount, shallowRef } from '@vue/composition-api';
+import { onBeforeUnmount, shallowRef } from '@vue/composition-api';
 import { ActorRef, Subscribable } from 'xstate';
 import { defaultGetSnapshot } from './useActor';
 
-const defaultCompare = (a, b) => a === b;
+export const defaultCompare = (a, b) => a === b;
 
 export function useSelector<
   TActor extends ActorRef<any, any>,
@@ -16,24 +16,15 @@ export function useSelector<
 ) {
   const selected = shallowRef(selector(getSnapshot(actor)));
 
-  const updateSelectedIfChanged = (nextSelected: T) => {
+  let sub = actor.subscribe((emitted) => {
+    const nextSelected = selector(emitted);
     if (!compare(selected.value, nextSelected)) {
       selected.value = nextSelected;
     }
-  };
-
-  let sub;
-  onMounted(() => {
-    const initialSelected = selector(getSnapshot(actor));
-    updateSelectedIfChanged(initialSelected);
-    sub = actor.subscribe((emitted) => {
-      const nextSelected = selector(emitted);
-      updateSelectedIfChanged(nextSelected);
-    });
   });
 
   onBeforeUnmount(() => {
-    sub?.unsubscribe();
+    sub.unsubscribe();
   });
 
   return selected;
