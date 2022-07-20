@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, toRefs, Ref } from '@vue/composition-api';
+import { defineComponent, PropType, toRefs, Ref } from 'vue';
 import { useService } from '../src';
 import { Interpreter } from 'xstate';
 

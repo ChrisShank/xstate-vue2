@@ -12,7 +12,7 @@
 <script lang="ts">
 import { useMachine, useActor } from '../src';
 import { createMachine, sendParent } from 'xstate';
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent } from 'vue';
 
 const childMachine = createMachine({
   id: 'childMachine',

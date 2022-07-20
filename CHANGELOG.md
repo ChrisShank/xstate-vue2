@@ -1,5 +1,11 @@
 # @xstate/vue
 
+## 0.3.0
+
+### Breaking changes
+
+- Remove `@vue/compsition-api` peer dependency. Add `vue@^2.7.0` as peer dependency.
+
 ## 0.2.1
 
 - Fix `useMachine` by accessing `service.initialState` so spawned actors work

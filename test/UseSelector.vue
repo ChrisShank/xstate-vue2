@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUpdated } from '@vue/composition-api';
+import { defineComponent, onMounted, onUpdated } from 'vue';
 import { assign, createMachine } from 'xstate';
 import { useInterpret, useSelector } from '../src';
 

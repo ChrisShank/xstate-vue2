@@ -1,6 +1,6 @@
 import { EventObject, State, Interpreter, Typestate, Sender } from 'xstate';
 
-import { Ref, isRef } from '@vue/composition-api';
+import { Ref, isRef } from 'vue';
 
 import { useActor } from './useActor';
 

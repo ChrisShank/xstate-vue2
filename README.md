@@ -16,23 +16,13 @@
 
 ## Quick Start
 
-1. Install `xstate` (or `@xstate/fsm`), `xstate-vue2`, and `@vue/composition-api`:
+1. Install `xstate` (or `@xstate/fsm`) and`xstate-vue2`
 
 ```bash
-npm i xstate xstate-vue2 @vue/composition-api
+npm i xstate xstate-vue2
 ```
 
-2. Install the Composition API plugin
-
-```ts
-// main.js
-import Vue from 'vue';
-import VueCompositionAPI from '@vue/composition-api';
-
-Vue.use(VueCompositionAPI);
-```
-
-3. Import the `useMachine` composition function:
+2. Import the `useMachine` composition function:
 
 ```vue
 <template>
