@@ -1,5 +1,9 @@
 # @xstate/vue
 
+## 0.3.1
+
+- Fix bug in `useInterpret`/ `useMachine` by subscribing to the service in setup instead of `onMounted`.
+
 ## 0.3.0
 
 ### Breaking changes
