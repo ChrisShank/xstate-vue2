@@ -11,7 +11,7 @@ import {
   Subscription
 } from 'xstate';
 import { UseMachineOptions, MaybeLazy } from './types';
-import { onBeforeUnmount, onMounted } from 'vue';
+import { onBeforeUnmount } from 'vue';
 
 // copied from core/src/utils.ts
 // it avoids a breaking change between this package and XState which is its peer dep
@@ -78,11 +78,9 @@ export function useInterpret<
   );
 
   let sub: Subscription;
-  onMounted(() => {
-    if (observerOrListener) {
-      sub = service.subscribe(toObserver(observerOrListener));
-    }
-  });
+  if (observerOrListener) {
+    sub = service.subscribe(toObserver(observerOrListener));
+  }
 
   onBeforeUnmount(() => {
     service.stop();
